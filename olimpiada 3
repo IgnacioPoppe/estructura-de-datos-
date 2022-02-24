@@ -1,0 +1,7 @@
+peso=float(input("Ingrese el peso: "))
+estatura=float(input("Ingrese su estatura:"))
+print("Tu peso es de",peso,"kg")
+print("Tu estatura es de",estatura,"metros")
+estatura=estatura*estatura
+imc=peso/estatura
+print("Tu IMC es de: ",imc)
