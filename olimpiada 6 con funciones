@@ -1,0 +1,9 @@
+def mayoria(edad):
+    if edad < 18: 
+        print ("Eres ilegal ")
+    else:
+        print("Eres legal")
+    return mayoria
+
+edad= int(input("¿Cuál es tu edad? "))
+mayoria(edad)
