@@ -1,0 +1,6 @@
+awarded = []
+numero = int(input("introduce el nuemro de elementos"))
+for i int range (6):
+    awarded.append(int(input("introduce el numero ganador: ")))
+awarded.sort()
+print("los numeros ganadores son" +str(awarded))
