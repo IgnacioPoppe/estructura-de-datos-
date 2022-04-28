@@ -1,0 +1,30 @@
+import os
+
+print (" Crear un archivo ")
+print (" ================ ")
+
+NOMBRE_ARCHIVO = "datos.txt"
+
+archivo = open(NOMBRE_ARCHIVO, "w")
+archivo.write(" CUPON_Mes; 400 Bs.\n CUPON_Dual ; 450 Bs. \n CUPON_Semestral ; 1350 Bs. \n CUPON_Familiar ; 1500 Bs. \n CUPON_Anual ; 4500 Bs.")
+archivo.write("")
+archivo.close()
+
+if NOMBRE_ARCHIVO in os.listdir("."):
+    print("\nArchivo creado en la ruta: \n\n\t{0}\{1}".format(os.getcwd(), NOMBRE_ARCHIVO))
+else:
+    print ("El archivo fue creado!!\n")
+    
+archivo = open(NOMBRE_ARCHIVO, 'r')
+contenido = archivo.read()
+print (contenido)
+archivo.close()
+
+print("\n\n Iterar sobre un archivo")
+print("============================")
+
+archivo = open(NOMBRE_ARCHIVO, 'r')
+for linea in archivo:
+    print (linea)
+print ("\n")
+archivo.close()
