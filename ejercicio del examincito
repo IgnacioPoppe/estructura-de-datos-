@@ -1,0 +1,66 @@
+def contador(x):
+    conta=[]
+    for i in x:
+        r=x.count(i)
+        if(r>1):
+            conta.append(i)
+    return conta
+
+def rep1(x,y):
+    rep=[]
+    for i in x:
+        for j in y:
+            if(i==j):
+               rep.append(i)
+    return rep
+
+def rep2(x,y):
+    repe=[]
+    for i in y:
+        for j in x:
+            if(i!=j):
+                repe.append(j)
+                repe.append(i)
+    return repe
+
+def remov(x,y):
+    for i in x:
+        for j in y:
+            if(j==i):
+                y.remove(j)
+    return y
+
+Primaria=[]
+Secundaria=[]
+
+print("nombres de primaria")
+print("nota: para dejar de ingresar nombres presione x")
+nomp=input("ingrese el nombre del alumno de primaria: ")
+
+while(nomp != 'x'):
+    Primaria.append(nomp)
+    nomp=input("ingrese el nombre del alumno de primaria: ")
+    
+
+print("nombres de secundaria")
+print("nota: para dejar de ingresar nombres presione x")
+noms=input("ingrese el nombre del alumno de secundaria: ")
+
+while(noms != 'x'):
+    Secundaria.append(noms)
+    noms=input("ingrese el nombre del alumno de secundaria: ")
+    
+    
+repP=contador(Primaria)
+repS=contador(Secundaria)
+Primaria=list(set(Primaria))
+Secundaria=list(set(Secundaria))
+print("Nivel Primario:", Primaria)
+print("Nivel Secundaria:", Secundaria)
+repetidos=rep1(Primaria,Secundaria)
+norepetidos=rep2(Primaria,Secundaria)
+repetidos=list(set(repetidos))
+norepetidos=list(set(norepetidos))
+norepetidos2=remov(repetidos,norepetidos)
+print("nombres repetidos: ",repetidos)
+print("nombres norepetidos: ",norepetidos2)
